@@ -13,15 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('components.base-layout', ['pageTitle' => 'ff']);
+// });
+
+// Route::get('/dashboard', function () {
+//     return view('welcome');
+// })->name('dashboard');
+
 Route::get('/', function () {
-    return view('components.base-layout', ['pageTitle' => 'ff']);
+    return view('pages.index');
 });
-
-Route::get('/dashboard', function () {
-    return view('welcome');
-})->name('dashboard');
-
-Route::get('/test', function () {
-    return view('pages.test');
-});
-

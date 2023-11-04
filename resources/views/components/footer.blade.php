@@ -16,6 +16,9 @@
                     referebat? Materiaque mentes et, quo omnia captiva ore mandat cepit triformis filia. Prius sorte
                     nomina in repellite sentit facunde te aures, vires.</p> --}}
                 <hr class="my-5">
+                <p class="mb-5">Possent quippe. Conata fera ab Hersilie iam auditur haesit. Culpa ignis retia
+                    Aonides ictus crescendo micantes, petere, ambustaque vicem in digitos iubet cornigeris.</p>
+
                 <div class="row">
                     <div style="width: 100px; height: 100px">
                         <button class="btn btn-social-login">
@@ -72,7 +75,6 @@
     </div>
     <div class="footer-section f-section-1 text-center">
         <p class=""><b>Copyright © <span class="dynamic-year">2023</span> <a target="_blank"
-                href="/test">Bhoothat</a>, All rights reserved.</b></p>
+                    href="/test">Bhoothat</a>, All rights reserved.</b></p>
     </div>
 </div>
-

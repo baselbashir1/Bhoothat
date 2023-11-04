@@ -21,6 +21,9 @@
                                     <p>15 May 2022</p>
                                 </div>
                             </div> --}}
+                            <button class="btn btn-warning m-auto w-50" style="font-size: 18px">Request the
+                                research paper from here</button>
+
                             {{-- <div class="align-self-center">
                                 <button class="btn btn-success btn-icon btn-share btn-rounded">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -67,6 +70,31 @@
     </div>
 
     <div class="row">
+        <h4 class="text-center m-4"><b>Samples</b></h4>
+        @for ($i = 1; $i <= 4; $i++)
+            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 mb-4">
+                <a href="./app-blog-post.html" class="card style-2 mb-md-0 mb-4">
+                    <img src="{{ Vite::asset('public/src/assets/img/pdf-to-word.png') }}" class="card-img-top"
+                        alt="...">
+                    <div class="card-body px-0 pb-0">
+                        <h5 class="card-title mb-3">Convert PDF files to Word.</h5>
+                        {{-- <div class="media mt-4 mb-0 pt-1">
+                        <img src="../src/assets/img/profile-5.jpeg" class="card-media-image me-3" alt="">
+                        <div class="media-body">
+                            <h4 class="media-heading mb-1">Shaun Park</h4>
+                            <p class="media-text">01 May</p>
+                        </div>
+                    </div> --}}
+                    </div>
+                </a>
+            </div>
+        @endfor
+    </div>
+
+
+
+
+    <div class="row">
         <h4 class="text-center m-4"><b>Our Services</b></h4>
         @for ($i = 1; $i <= 4; $i++)
             <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 mb-4">
@@ -86,5 +114,8 @@
                 </a>
             </div>
         @endfor
+    </div>
+
+
 
 </x-base-layout>
