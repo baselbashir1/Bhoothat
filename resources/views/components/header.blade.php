@@ -45,6 +45,10 @@
 
         <ul class="navbar-item flex-row ms-lg-auto ms-0 action-area">
 
+            <li class="nav-item theme-toggle-item">
+                <a href="#"><i class="bx bx-log-in"></i></a>
+            </li>
+
             <li class="nav-item dropdown language-dropdown">
                 <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="language-dropdown"
                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
