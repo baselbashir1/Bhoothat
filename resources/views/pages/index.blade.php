@@ -94,7 +94,7 @@
                                                             aria-label="email"> --}}
                                                         <x-text-input id="email" class="form-control" type="email"
                                                             name="email" :value="old('email')" required autofocus
-                                                            autocomplete="username" />
+                                                            autocomplete="email" />
                                                         <x-input-error :messages="$errors->get('email')" class="mt-2" />
                                                     </div>
                                                 </div>
@@ -118,7 +118,7 @@
                                                             placeholder="Password" aria-label="password"> --}}
                                                         <x-text-input id="password" class="form-control"
                                                             type="password" name="password" required
-                                                            autocomplete="current-password" />
+                                                            autocomplete="password" />
 
                                                         <x-input-error :messages="$errors->get('password')" class="mt-2" />
                                                     </div>
@@ -274,7 +274,7 @@
                                                             placeholder="Email" aria-label="email"> --}}
                                                         <x-text-input id="email" class="form-control"
                                                             type="email" name="email" :value="old('email')" required
-                                                            autocomplete="username" />
+                                                            autocomplete="email" />
                                                         <x-input-error :messages="$errors->get('email')" class="mt-2" />
                                                     </div>
                                                 </div>

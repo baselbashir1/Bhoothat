@@ -18,7 +18,7 @@
                 </a>
             </li>
             <li class="nav-item theme-text">
-                <a href="/" class="nav-link"> Bhoothat </a>
+                <a href="/test" class="nav-link"> Bhoothat </a>
             </li>
         </ul>
 
@@ -45,9 +45,26 @@
 
         <ul class="navbar-item flex-row ms-lg-auto ms-0 action-area">
 
-            <li class="nav-item theme-toggle-item">
-                <a href="#"><i class="bx bx-log-in"></i></a>
-            </li>
+            @auth
+                <li class="nav-item theme-toggle-item">
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+
+                        <x-dropdown-link :href="route('logout')"
+                            onclick="event.preventDefault();
+                                        this.closest('form').submit();">
+                            <i class="bx bx-log-out"></i>
+                            {{ __('Log Out') }}
+                        </x-dropdown-link>
+                    </form>
+                </li>
+            @else
+                <li class="nav-item theme-toggle-item">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="bx bx-log-in"></i> log
+                        in</a>
+                </li>
+            @endauth
+
 
             <li class="nav-item dropdown language-dropdown">
                 <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="language-dropdown"

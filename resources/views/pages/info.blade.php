@@ -2,25 +2,9 @@
 
     <x-slot:pageTitle>Bhoothat</x-slot>
 
-    <link href="../layouts/horizontal-dark-menu/css/light/loader.css" rel="stylesheet" type="text/css" />
-    <link href="../layouts/horizontal-dark-menu/css/dark/loader.css" rel="stylesheet" type="text/css" />
-    <script src="../layouts/horizontal-dark-menu/loader.js"></script>
-    <!-- BEGIN GLOBAL MANDATORY STYLES -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
-    <link href="../src/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="../layouts/horizontal-dark-menu/css/light/plugins.css" rel="stylesheet" type="text/css" />
-    <link href="../layouts/horizontal-dark-menu/css/dark/plugins.css" rel="stylesheet" type="text/css" />
-    <!-- END GLOBAL MANDATORY STYLES -->
-
-    <!--  BEGIN CUSTOM STYLE FILE  -->
-    <link rel="stylesheet" type="text/css" href="../src/plugins/src/stepper/bsStepper.min.css">
-
-    <link rel="stylesheet" type="text/css" href="../src/assets/css/light/scrollspyNav.css"/>
-    <link rel="stylesheet" type="text/css" href="../src/plugins/css/light/stepper/custom-bsStepper.css">
-
-    <link rel="stylesheet" type="text/css" href="../src/assets/css/dark/scrollspyNav.css"/>
-    <link rel="stylesheet" type="text/css" href="../src/plugins/css/dark/stepper/custom-bsStepper.css">
-
+    @vite(['public/src/plugins/src/stepper/bsStepper.min.css'])
+    @vite(['public/src/plugins/css/light/stepper/custom-bsStepper.css'])
+    @vite(['public/src/plugins/css/dark/stepper/custom-bsStepper.css'])
 
     <div class="row layout-top-spacing" id="cancel-row">
         <div id="wizard_Default" class="col-lg-12 layout-spacing">
@@ -28,7 +12,7 @@
                 <div class="widget-header">
                     <div class="row">
                         <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                            <h4>Default</h4>
+                            <h4>اترك موضوعك</h4>
                         </div>
                     </div>
                 </div>
@@ -62,7 +46,7 @@
                             <div id="defaultStep-one" class="content" role="tabpanel">
                                 <form>
                                     <div class="form-group mb-4">
-                                        <label for="defaultForm-name">Name</label>
+                                        <label for="defaultForm-name">Enter your phone number</label>
                                         <input type="text" class="form-control" id="defaultForm-name">
                                     </div>
                                 </form>
@@ -75,7 +59,7 @@
                             <div id="defaultStep-two" class="content" role="tabpanel">
                                 <form>
                                     <div class="form-group mb-4">
-                                        <label for="defaultEmailAddress">Email Address</label>
+                                        <label for="defaultEmailAddress">Enter the subject of research</label>
                                         <input type="email" class="form-control" id="defaultEmailAddress">
                                     </div>
                                 </form>
@@ -88,17 +72,17 @@
                             <div id="defaultStep-three" class="content" role="tabpanel">
                                 <form class="row g-3">
                                     <div class="col-12">
-                                        <label for="defaultInputAddress" class="form-label">Address</label>
+                                        <label for="defaultInputAddress" class="form-label">Instructor name</label>
                                         <input type="text" class="form-control" id="defaultInputAddress"
                                             placeholder="1234 Main St">
                                     </div>
                                     <div class="col-12">
-                                        <label for="defaultInputAddress2" class="form-label">Address 2</label>
+                                        <label for="defaultInputAddress2" class="form-label">Reseach name</label>
                                         <input type="text" class="form-control" id="defaultInputAddress2"
                                             placeholder="Apartment, studio, or floor">
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="defaultInputCity" class="form-label">City</label>
+                                        <label for="defaultInputCity" class="form-label">Enter your city</label>
                                         <input type="text" class="form-control" id="defaultInputCity">
                                     </div>
                                     <div class="col-md-4">
@@ -135,17 +119,7 @@
         </div>
     </div>
 
-    <script src="../src/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../src/plugins/src/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="../src/plugins/src/mousetrap/mousetrap.min.js"></script>
-    <script src="../src/plugins/src/waves/waves.min.js"></script>
-    <script src="../layouts/horizontal-dark-menu/app.js"></script>
-    <script src="../src/plugins/src/highlight/highlight.pack.js"></script>
-    <script src="../src/assets/js/scrollspyNav.js"></script>
-    <!-- END GLOBAL MANDATORY SCRIPTS -->
-
-    <!-- BEGIN PAGE LEVEL SCRIPTS -->
-    <script src="../src/plugins/src/stepper/bsStepper.min.js"></script>
-    <script src="../src/plugins/src/stepper/custom-bsStepper.min.js"></script>
+    @vite(['public/src/plugins/src/stepper/bsStepper.min.js'])
+    @vite(['public/src/plugins/src/stepper/custom-bsStepper.min.js'])
 
 </x-base-layout>
