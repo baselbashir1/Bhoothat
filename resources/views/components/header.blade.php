@@ -15,10 +15,22 @@
                 <a href="/">
                     <img src="{{ Vite::asset('public/src/assets/img/logo-new.png') }}" class="navbar-logo"
                         alt="logo">
+                    {{-- <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-world-search"
+                        width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                        fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M21 12a9 9 0 1 0 -9 9"></path>
+                        <path d="M3.6 9h16.8"></path>
+                        <path d="M3.6 15h7.9"></path>
+                        <path d="M11.5 3a17 17 0 0 0 0 18"></path>
+                        <path d="M12.5 3a16.984 16.984 0 0 1 2.574 8.62"></path>
+                        <path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                        <path d="M20.2 20.2l1.8 1.8"></path>
+                    </svg> --}}
                 </a>
             </li>
             <li class="nav-item theme-text">
-                <a href="/test" class="nav-link"> Bhoothat </a>
+                <a href="/" class="nav-link"> Bhoothat </a>
             </li>
         </ul>
 
@@ -47,29 +59,47 @@
 
             @auth
                 <li class="nav-item theme-toggle-item">
+                    <a href="#">{{ Auth::user()->name }}</a>
+                </li>
+                <li class="nav-item theme-toggle-item">
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
-
                         <x-dropdown-link :href="route('logout')"
                             onclick="event.preventDefault();
-                                        this.closest('form').submit();">
-                            <i class="bx bx-log-out"></i>
+                                            this.closest('form').submit();">
                             {{ __('Log Out') }}
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-logout-2"
+                                width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M10 8v-2a2 2 0 0 1 2 -2h7a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-2">
+                                </path>
+                                <path d="M15 12h-12l3 -3"></path>
+                                <path d="M6 15l-3 -3"></path>
+                            </svg>
                         </x-dropdown-link>
                     </form>
                 </li>
             @else
                 <li class="nav-item theme-toggle-item">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="bx bx-log-in"></i> log
-                        in</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        Log In
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-login-2" width="24"
+                            height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M9 8v-2a2 2 0 0 1 2 -2h7a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-2"></path>
+                            <path d="M3 12h13l-3 -3"></path>
+                            <path d="M13 15l3 -3"></path>
+                        </svg>
+                    </a>
                 </li>
             @endauth
-
 
             <li class="nav-item dropdown language-dropdown">
                 <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="language-dropdown"
                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="../src/assets/img/1x1/uae.png" class="flag-width" alt="flag">
+                    <img src="{{ Vite::asset('public/src/assets/img/1x1/uae.png') }}" class="flag-width" alt="flag">
                     {{-- <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                         class="bi bi-translate" viewBox="0 0 16 16">
                         <path
@@ -79,27 +109,45 @@
                     </svg> --}}
                 </a>
                 <div class="dropdown-menu position-absolute" aria-labelledby="language-dropdown">
-                    <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="../src/assets/img/1x1/us.svg"
-                            class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;English</span></a>
-                    <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="../src/assets/img/1x1/tr.svg"
-                            class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;Turkish</span></a>
-                    <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="../src/assets/img/1x1/br.svg"
-                            class="flag-width" alt="flag"> <span
-                            class="align-self-center">&nbsp;Portuguese</span></a>
-                    <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="../src/assets/img/1x1/in.svg"
-                            class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;Hindi</span></a>
-                    <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="../src/assets/img/1x1/de.svg"
-                            class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;German</span></a>
+                    <a class="dropdown-item d-flex" href="javascript:void(0);"><img
+                            src="{{ Vite::asset('public/src/assets/img/1x1/us.svg') }}" class="flag-width"
+                            alt="flag"> <span class="align-self-center">&nbsp;English</span></a>
+                    <a class="dropdown-item d-flex" href="javascript:void(0);"><img
+                            src="{{ Vite::asset('public/src/assets/img/1x1/tr.svg') }}" class="flag-width"
+                            alt="flag"> <span class="align-self-center">&nbsp;Turkish</span></a>
+                    <a class="dropdown-item d-flex" href="javascript:void(0);"><img
+                            src="{{ Vite::asset('public/src/assets/img/1x1/br.svg') }}" class="flag-width"
+                            alt="flag"> <span class="align-self-center">&nbsp;Portuguese</span></a>
+                    <a class="dropdown-item d-flex" href="javascript:void(0);"><img
+                            src="{{ Vite::asset('public/src/assets/img/1x1/in.svg') }}" class="flag-width"
+                            alt="flag"> <span class="align-self-center">&nbsp;Hindi</span></a>
+                    <a class="dropdown-item d-flex" href="javascript:void(0);"><img
+                            src="{{ Vite::asset('public/src/assets/img/1x1/de.svg') }}" class="flag-width"
+                            alt="flag"> <span class="align-self-center">&nbsp;German</span></a>
                 </div>
             </li>
 
             <li class="nav-item theme-toggle-item">
                 <a href="javascript:void(0);" class="nav-link theme-toggle">
+
+                    {{-- old moon --}}
+
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" class="feather feather-moon dark-mode">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
+
+                    {{-- new moon --}}
+                    {{-- <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon-filled"
+                        width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                        fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path
+                            d="M12 1.992a10 10 0 1 0 9.236 13.838c.341 -.82 -.476 -1.644 -1.298 -1.31a6.5 6.5 0 0 1 -6.864 -10.787l.077 -.08c.551 -.63 .113 -1.653 -.758 -1.653h-.266l-.068 -.006l-.06 -.002z"
+                            stroke-width="0" fill="currentColor"></path>
+                    </svg> --}}
+
 
                     {{-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                         class="bi bi-moon-stars-fill dark-mode" viewBox="0 0 16 16">
@@ -109,7 +157,7 @@
                             d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
                     </svg> --}}
 
-
+                    {{-- old sun --}}
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" class="feather feather-sun light-mode">
@@ -123,6 +171,37 @@
                         <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
+
+                    {{-- new sun --}}
+                    {{-- <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun-filled"
+                        width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                        fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path
+                            d="M12 19a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z"
+                            stroke-width="0" fill="currentColor"></path>
+                        <path
+                            d="M18.313 16.91l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.218 -1.567l.102 .07z"
+                            stroke-width="0" fill="currentColor"></path>
+                        <path
+                            d="M7.007 16.993a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z"
+                            stroke-width="0" fill="currentColor"></path>
+                        <path d="M4 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z"
+                            stroke-width="0" fill="currentColor"></path>
+                        <path d="M21 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z"
+                            stroke-width="0" fill="currentColor"></path>
+                        <path
+                            d="M6.213 4.81l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.217 -1.567l.102 .07z"
+                            stroke-width="0" fill="currentColor"></path>
+                        <path
+                            d="M19.107 4.893a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z"
+                            stroke-width="0" fill="currentColor"></path>
+                        <path
+                            d="M12 2a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z"
+                            stroke-width="0" fill="currentColor"></path>
+                        <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"
+                            stroke-width="0" fill="currentColor"></path>
+                    </svg> --}}
 
                     {{-- <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                         class="bi bi-brightness-high-fill light-mode" viewBox="0 0 16 16">

@@ -22,8 +22,10 @@
                                 </div>
                             </div> --}}
                             <button class="btn btn-warning m-auto w-50" style="font-size: 18px" data-bs-toggle="modal"
-                                data-bs-target="#loginModal">Request the
-                                research paper from here</button>
+                                data-bs-target="#loginModal">
+                                <span>Request the
+                                    research paper from here</span>
+                            </button>
 
                             <!-- Login Modal -->
                             {{-- <div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
@@ -59,7 +61,7 @@
                                     <div class="modal-content">
 
                                         <div class="modal-header" id="inputFormModalLabel">
-                                            <h5 class="modal-title">Welcome to <b>Cork Admin</b></h5>
+                                            <h5 class="modal-title">Login to <b>Bhoothat</b></h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                 aria-hidden="true"><svg aria-hidden="true"
                                                     xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -93,8 +95,8 @@
                                                         {{-- <input type="text" class="form-control" placeholder="Email"
                                                             aria-label="email"> --}}
                                                         <x-text-input id="email" class="form-control" type="email"
-                                                            name="email" :value="old('email')" required autofocus
-                                                            autocomplete="email" />
+                                                            name="email" :value="old('email')" autocomplete="email"
+                                                            placeholder="Enter your email address" required autofocus />
                                                         <x-input-error :messages="$errors->get('email')" class="mt-2" />
                                                     </div>
                                                 </div>
@@ -117,8 +119,9 @@
                                                         {{-- <input type="password" class="form-control"
                                                             placeholder="Password" aria-label="password"> --}}
                                                         <x-text-input id="password" class="form-control"
-                                                            type="password" name="password" required
-                                                            autocomplete="password" />
+                                                            type="password" name="password"
+                                                            placeholder="Enter your password" autocomplete="password"
+                                                            required autofocus />
 
                                                         <x-input-error :messages="$errors->get('password')" class="mt-2" />
                                                     </div>
@@ -142,8 +145,8 @@
                                                 <div class="btn btn-light-success mt-2 mb-2 btn-no-effect"
                                                     data-bs-dismiss="#loginModal" data-bs-toggle="modal"
                                                     data-bs-target="#registerModal">Sign up</div>
-                                                <button type="submit" class="btn btn-primary mt-2 mb-2 btn-no-effect"
-                                                    data-bs-dismiss="modal">Log in</button>
+                                                <button type="submit"
+                                                    class="btn btn-primary mt-2 mb-2 btn-no-effect">Log in</button>
                                             </div>
                                         </form>
                                     </div>
@@ -191,7 +194,7 @@
                                     <div class="modal-content">
 
                                         <div class="modal-header" id="inputFormModalLabel">
-                                            <h5 class="modal-title">Welcome to <b>Bhoothat</b></h5>
+                                            <h5 class="modal-title">Register to <b>Bhoothat</b></h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                 aria-hidden="true"><svg aria-hidden="true"
                                                     xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -215,22 +218,23 @@
                                                     <div class="input-group mb-3">
                                                         <span class="input-group-text">
                                                             <svg xmlns="http://www.w3.org/2000/svg"
-                                                                class="icon icon-tabler icon-tabler-mail"
+                                                                class="icon icon-tabler icon-tabler-user"
                                                                 width="24" height="24" viewBox="0 0 24 24"
                                                                 stroke-width="2" stroke="currentColor" fill="none"
                                                                 stroke-linecap="round" stroke-linejoin="round">
                                                                 <path stroke="none" d="M0 0h24v24H0z" fill="none">
                                                                 </path>
-                                                                <rect x="3" y="5" width="18" height="14"
-                                                                    rx="2"></rect>
-                                                                <polyline points="3 7 12 13 21 7"></polyline>
+                                                                <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+                                                                <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2">
+                                                                </path>
                                                             </svg>
                                                         </span>
                                                         {{-- <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}"
                                                             placeholder="Name" aria-label="name" required> --}}
                                                         <x-text-input id="name" class="form-control"
-                                                            type="text" name="name" :value="old('name')" required
-                                                            autofocus autocomplete="name" />
+                                                            type="text" name="name" :value="old('name')"
+                                                            autocomplete="name" placeholder="Enter your name" required
+                                                            autofocus />
                                                         <x-input-error :messages="$errors->get('name')" class="mt-2" />
                                                     </div>
                                                 </div>
@@ -273,8 +277,10 @@
                                                         {{-- <input type="text" class="form-control"
                                                             placeholder="Email" aria-label="email"> --}}
                                                         <x-text-input id="email" class="form-control"
-                                                            type="email" name="email" :value="old('email')" required
-                                                            autocomplete="email" />
+                                                            type="email" name="email" :value="old('email')"
+                                                            autocomplete="email"
+                                                            placeholder="Enter your email address" required
+                                                            autofocus />
                                                         <x-input-error :messages="$errors->get('email')" class="mt-2" />
                                                     </div>
                                                 </div>
@@ -297,8 +303,9 @@
                                                         {{-- <input type="password" class="form-control"
                                                             placeholder="Password" aria-label="password"> --}}
                                                         <x-text-input id="password" class="form-control"
-                                                            type="password" name="password" required
-                                                            autocomplete="new-password" />
+                                                            type="password" name="password"
+                                                            placeholder="Enter your password"
+                                                            autocomplete="new-password" required autofocus />
 
                                                         <x-input-error :messages="$errors->get('password')" class="mt-2" />
                                                     </div>
@@ -323,8 +330,9 @@
                                                             placeholder="Confirm Password"
                                                             aria-label="confirm-password"> --}}
                                                         <x-text-input id="password_confirmation" class="form-control"
-                                                            type="password" name="password_confirmation" required
-                                                            autocomplete="new-password" />
+                                                            type="password" name="password_confirmation"
+                                                            autocomplete="new-password"
+                                                            placeholder="Confirm your password" required autofocus />
 
                                                         <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                                                     </div>
@@ -334,11 +342,14 @@
                                                         <input class="form-check-input" type="checkbox"
                                                             value="" id="form-check-primary">
                                                         <label class="form-check-label mb-0" for="form-check-primary">
-                                                            Remember me
+                                                            I agree the <a href="javascript:void(0);"
+                                                                class="text-primary">Terms
+                                                                and
+                                                                Conditions</a>
                                                         </label>
                                                     </div>
 
-                                                    <a href="javascript:void(0);">Forget Password?</a>
+                                                    {{-- <a href="javascript:void(0);">Forget Password?</a> --}}
                                                 </div>
                                                 {{-- <x-primary-button class="ml-4">
                                                     {{ __('Register') }}
@@ -351,8 +362,8 @@
                                                 <div class="btn btn-light-success mt-2 mb-2 btn-no-effect"
                                                     data-bs-dismiss="#registerModal" data-bs-toggle="modal"
                                                     data-bs-target="#loginModal">Sign In</div>
-                                                <button type="submit" class="btn btn-primary mt-2 mb-2 btn-no-effect"
-                                                    data-bs-dismiss="modal">Register</button>
+                                                <button type="submit"
+                                                    class="btn btn-primary mt-2 mb-2 btn-no-effect">Register</button>
                                                 {{-- <x-primary-button class="ml-4">
                                                     {{ __('Register') }}
                                                 </x-primary-button> --}}

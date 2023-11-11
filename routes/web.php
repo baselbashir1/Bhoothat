@@ -23,7 +23,7 @@ Route::get('/test-register', function () {
     return view('pages.register');
 });
 
-Route::get('/test', function () {
+Route::get('/', function () {
     return view('pages.index');
 });
 
@@ -31,9 +31,9 @@ Route::get('/test', function () {
 //     return view('pages.info');
 // });
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/clear', function() {
     Artisan::call('config:cache');
