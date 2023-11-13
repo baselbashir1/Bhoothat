@@ -51,16 +51,40 @@
     @vite(['public/src/assets/css/dark/components/tabs.css'])
     <!--  END CUSTOM STYLE FILE  -->
 
-
-    {{-- <style>
-        .scrollbar {
+    <style>
+        /* .scrollbar {
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
+
         .scrollbar::-webkit-scrollbar {
             width: 0;
+        } */
+
+        .scrollbar::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+            background-color: transparent;
+            border-radius: 10px;
         }
-    </style> --}}
+
+        .scrollbar::-webkit-scrollbar {
+            width: 8px;
+            /* background-color: #F5F5F5; */
+            background-color: transparent;
+        }
+
+        .scrollbar::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+            background-image: -webkit-gradient(linear, left bottom, left top, from(#30cfd0), to(#330867));
+            background-image: -webkit-linear-gradient(bottom, #30cfd0 0%, #330867 100%);
+            background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+        }
+
+        .scrollbar {
+            scrollbar-color: #330867 #F5F5F5;
+        }
+    </style>
 
 </head>
 
@@ -85,8 +109,8 @@
 
         <!--  BEGIN CONTENT AREA  -->
         <div id="content" class="main-content">
-            <div class="layout-px-spacing">
-                <div class="middle-content container-xxl p-0">
+            <div> {{-- <div class="layout-px-spacing"> --}}
+                <div> {{-- <div class="middle-content container-xxl p-0"> --}}
                     <!--  BEGIN BREADCRUMBS  -->
                     {{ $slot }}
                     <!--  END BREADCRUMBS  -->

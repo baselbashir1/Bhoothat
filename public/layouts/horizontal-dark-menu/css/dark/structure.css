@@ -125,7 +125,7 @@ body.dark .layout-boxed #content > .footer-wrapper {
 body.dark #content {
   width: 50%;
   flex-grow: 8;
-  margin-top: 75px;
+  margin-top: 65px;
   margin-bottom: 0;
   -webkit-transition: 0.3s ease all;
   transition: 0.3s ease all;

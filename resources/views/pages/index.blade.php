@@ -2,16 +2,17 @@
 
     <x-slot:pageTitle>Bhoothat</x-slot>
 
-    <div class="row layout-top-spacing">
+    <div class="row"> {{-- <div class="row layout-top-spacing"> --}}
         <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-4">
-            <div class="single-post-content">
+            <div> {{-- <div class="single-post-content"> --}}
                 <div class="featured-image">
                     <div class="featured-image-overlay"></div>
                     <div class="post-header">
                         <div class="post-title">
                             {{-- <h1 class="mb-0">All educational services are available in our website...</h1> --}}
                             <h1 class="mb-0">Comprehensive educational services are readily accessible through our
-                                website, providing a wealth of resources and opportunities for learning...</h1>
+                                website, providing a wealth of resources and opportunities for learning, Request the
+                                research paper now...</h1>
                         </div>
                         <div class="post-meta-info d-flex justify-content-between">
                             {{-- <div class="media">
@@ -21,10 +22,9 @@
                                     <p>15 May 2022</p>
                                 </div>
                             </div> --}}
-                            <button class="btn btn-warning m-auto w-50" style="font-size: 18px" data-bs-toggle="modal"
+                            <button class="btn btn-warning m-auto w-auto" style="font-size: 18px" data-bs-toggle="modal"
                                 data-bs-target="#loginModal">
-                                <span>Request the
-                                    research paper from here</span>
+                                <span>Request from here</span>
                             </button>
 
                             <!-- Login Modal -->

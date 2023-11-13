@@ -21,7 +21,7 @@ body.dark .featured-image {
   background-position: center;
   background-size: cover;
   background-attachment: inherit;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   overflow: hidden;
 }
 body.dark .featured-image .featured-image-overlay {
