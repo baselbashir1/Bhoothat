@@ -524,7 +524,7 @@
                     <a href="./app-blog-post.html" class="card style-2 mb-md-0 mb-4">
                         <img src="{{ Vite::asset('public/src/assets/img/pdf-to-word.png') }}" class="card-img-top"
                             alt="...">
-                        <div class="card-body px-0 pb-0">
+                        <div class="card-body px-0 pb-0 text-center">
                             <h5 class="card-title mb-3">Convert PDF files to Word.</h5>
                             {{-- <div class="media mt-4 mb-0 pt-1">
                         <img src="../src/assets/img/profile-5.jpeg" class="card-media-image me-3" alt="">
@@ -533,6 +533,7 @@
                             <p class="media-text">01 May</p>
                         </div>
                     </div> --}}
+                            <button class="btn btn-success">Read</button>
                         </div>
                     </a>
                 </div>
