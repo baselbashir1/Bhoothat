@@ -1,17 +1,18 @@
 <div class="header-container container-xxl" style="box-shadow: 0 2px 4px 6px rgba(0, 0, 0, 0.1);">
     <header class="header navbar navbar-expand-sm expand-header">
 
-        <a href="javascript:void(0);" class="sidebarCollapse" data-placement="bottom"><svg
-                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        <a href="javascript:void(0);" class="sidebarCollapse" data-placement="bottom">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="feather feather-menu">
                 <line x1="3" y1="12" x2="21" y2="12"></line>
                 <line x1="3" y1="6" x2="21" y2="6"></line>
                 <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg></a>
+            </svg>
+        </a>
 
         <ul class="navbar-item theme-brand flex-row text-center">
-            <li class="nav-item theme-logo">
+            <li class="nav-item theme-logo theme-logo-new">
                 <a href="/">
                     <img src="{{ Vite::asset('public/src/assets/img/logo-new.png') }}" class="navbar-logo"
                         alt="logo">
@@ -58,10 +59,10 @@
         <ul class="navbar-item flex-row ms-lg-auto ms-0 action-area">
 
             @auth
-                <li class="nav-item theme-toggle-item">
+                <li class="nav-item theme-toggle-item theme-auth-new">
                     <a href="#">{{ Auth::user()->name }}</a>
                 </li>
-                <li class="nav-item theme-toggle-item">
+                <li class="nav-item theme-toggle-item theme-auth-new">
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
                         <x-dropdown-link :href="route('logout')"
@@ -81,7 +82,7 @@
                     </form>
                 </li>
             @else
-                <li class="nav-item theme-toggle-item">
+                <li class="nav-item theme-toggle-item theme-auth-new">
                     <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
                         Log In
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-login-2" width="24"
@@ -96,10 +97,11 @@
                 </li>
             @endauth
 
-            <li class="nav-item dropdown language-dropdown">
+            <li class="nav-item dropdown language-dropdown theme-lang-new">
                 <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="language-dropdown"
                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="{{ Vite::asset('public/src/assets/img/1x1/uae.png') }}" class="flag-width" alt="flag">
+                    {{-- <img src="{{ Vite::asset('public/src/assets/img/1x1/uae.png') }}" class="flag-width" alt="flag"> --}}
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-world" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M3.6 9h16.8" /><path d="M3.6 15h16.8" /><path d="M11.5 3a17 17 0 0 0 0 18" /><path d="M12.5 3a17 17 0 0 1 0 18" /></svg>
                     {{-- <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                         class="bi bi-translate" viewBox="0 0 16 16">
                         <path
@@ -110,24 +112,15 @@
                 </a>
                 <div class="dropdown-menu position-absolute" aria-labelledby="language-dropdown">
                     <a class="dropdown-item d-flex" href="javascript:void(0);"><img
+                            src="{{ Vite::asset('public/src/assets/img/1x1/uae.png') }}" class="flag-width"
+                            alt="flag"> <span class="align-self-center">&nbsp;Arabic</span></a>
+                    <a class="dropdown-item d-flex" href="javascript:void(0);"><img
                             src="{{ Vite::asset('public/src/assets/img/1x1/us.svg') }}" class="flag-width"
                             alt="flag"> <span class="align-self-center">&nbsp;English</span></a>
-                    <a class="dropdown-item d-flex" href="javascript:void(0);"><img
-                            src="{{ Vite::asset('public/src/assets/img/1x1/tr.svg') }}" class="flag-width"
-                            alt="flag"> <span class="align-self-center">&nbsp;Turkish</span></a>
-                    <a class="dropdown-item d-flex" href="javascript:void(0);"><img
-                            src="{{ Vite::asset('public/src/assets/img/1x1/br.svg') }}" class="flag-width"
-                            alt="flag"> <span class="align-self-center">&nbsp;Portuguese</span></a>
-                    <a class="dropdown-item d-flex" href="javascript:void(0);"><img
-                            src="{{ Vite::asset('public/src/assets/img/1x1/in.svg') }}" class="flag-width"
-                            alt="flag"> <span class="align-self-center">&nbsp;Hindi</span></a>
-                    <a class="dropdown-item d-flex" href="javascript:void(0);"><img
-                            src="{{ Vite::asset('public/src/assets/img/1x1/de.svg') }}" class="flag-width"
-                            alt="flag"> <span class="align-self-center">&nbsp;German</span></a>
                 </div>
             </li>
 
-            <li class="nav-item theme-toggle-item">
+            <li class="nav-item theme-toggle-item theme-mode-new">
                 <a href="javascript:void(0);" class="nav-link theme-toggle">
 
                     {{-- old moon --}}
