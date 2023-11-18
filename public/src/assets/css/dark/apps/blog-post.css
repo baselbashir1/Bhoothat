@@ -12,12 +12,13 @@ body.dark .single-post-content {
   background-color: #0e1726;
   /* border-radius: 20px; */
   border: 1px solid #0e1726;
-  padding: 32px;
+  /* padding: 32px; */
+  padding: 0 20px 40px 20px;
 }
 body.dark .featured-image {
   position: relative;
   background: lightblue url("../../../img/bg-new.jpg") no-repeat fixed center;
-  height: 650px;
+  height: 675px;
   background-position: center;
   background-size: cover;
   background-attachment: inherit;
@@ -84,7 +85,7 @@ body.dark .featured-image .post-meta-info .btn-share {
 }
 body.dark .post-content {
   margin: 0 auto;
-  padding: 48px 0;
+  padding: 40px 0;
   padding-bottom: 0;
 }
 body.dark .post-content p {

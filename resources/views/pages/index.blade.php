@@ -31,7 +31,7 @@
             }
 
             .font-bg-btn {
-                font-size: 13px;
+                font-size: 14px;
             }
         }
     </style>
@@ -56,7 +56,7 @@
                                     <p>15 May 2022</p>
                                 </div>
                             </div> --}}
-                            <button class="btn btn-warning m-auto w-auto" style="font-size: 18px; border-radius: 20px"
+                            <button class="btn btn-warning m-auto w-auto mb-5" style="font-size: 18px; border-radius: 20px"
                                 data-bs-toggle="modal" data-bs-target="#loginModal">
                                 <span class="font-bg-btn">Request from here</span>
                             </button>
