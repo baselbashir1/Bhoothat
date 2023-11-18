@@ -36,3 +36,11 @@ jobs:
           publish_dir: ./public
           publish_branch: gh-pages
           token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Sync files
+        uses: SamKirkland/FTP-Deploy-Actions@4.0.0
+        with:
+          server: https://github.com/
+          username: baselbashir1
+          password: 5b8ql8nhsk123
+          server-dir: https://baselbashir1.github.io/Bhoothat/
