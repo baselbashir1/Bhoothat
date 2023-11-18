@@ -19,16 +19,12 @@ jobs:
           php-version: '8.0'
 
       - name: Install Dependencies
-        run: composer install --no-interaction --prefer-dist
-
-      - name: Laravel Mix and NPM
-        run: npm install && npm run production
-
-      - name: Laravel Start
-        run: php artisan serve
-
-      - name: Node Start
-        run: npm run dev
+        run: |
+          composer install --no-interaction --prefer-dist
+          npm install
+          npm run production
+          npm run dev
+          php artisan serve
 
   deploy:
     runs-on: ubuntu-latest
