@@ -273,22 +273,23 @@
 
     {{-- @endif --}}
 
+    @vite(['public/plugins/bootstrap/bootstrap.bundle.min.js'])
+    @vite(['public/plugins/perfect-scrollbar/perfect-scrollbar.min.js'])
+    @vite(['public/plugins/mousetrap/mousetrap.min.js'])
+    @vite(['public/plugins/waves/waves.min.js'])
+    @vite(['public/plugins/filepond/filepond.min.js'])
+    @vite(['public/plugins/filepond/FilePondPluginFileValidateType.min.js'])
+    @vite(['public/plugins/filepond/FilePondPluginImageExifOrientation.min.js'])
+    @vite(['public/plugins/filepond/FilePondPluginImagePreview.min.js'])
+    @vite(['public/plugins/filepond/FilePondPluginImageCrop.min.js'])
+    @vite(['public/plugins/filepond/FilePondPluginImageResize.min.js'])
+    @vite(['public/plugins/filepond/FilePondPluginImageTransform.min.js'])
+    @vite(['public\plugins\filepond\filepondPluginFileValidateSize.min.js'])
 
-    {{-- @vite(['public/src/bootstrap/js/bootstrap.bundle.min.js'])
-    @vite(['public/src/plugins/src/perfect-scrollbar/perfect-scrollbar.min.js'])
-    @vite(['public/src/plugins/src/mousetrap/mousetrap.min.js'])
-    @vite(['public/src/plugins/src/waves/waves.min.js'])
+    {{--
     @vite(['public/layouts/horizontal-dark-menu/app.js']) --}}
 
     {{-- @vite(['public/src/plugins/src/editors/quill/quill.js'])
-    @vite(['public/src/plugins/src/filepond/filepond.min.js'])
-    @vite(['public/src/plugins/src/filepond/FilePondPluginFileValidateType.min.js'])
-    @vite(['public/src/plugins/src/filepond/FilePondPluginImageExifOrientation.min.js'])
-    @vite(['public/src/plugins/src/filepond/FilePondPluginImagePreview.min.js'])
-    @vite(['public/src/plugins/src/filepond/FilePondPluginImageCrop.min.js'])
-    @vite(['public/src/plugins/src/filepond/FilePondPluginImageResize.min.js'])
-    @vite(['public/src/plugins/src/filepond/FilePondPluginImageTransform.min.js'])
-    @vite(['public/src/plugins/src/filepond/filepondPluginFileValidateSize.min.js'])
     @vite(['public/src/plugins/src/tagify/tagify.min.js'])
     @vite(['public/src/assets/js/apps/blog-create.js'])
     @vite(['public/src/plugins/src/highlight/highlight.pack.js'])
