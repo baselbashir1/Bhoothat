@@ -25,9 +25,9 @@
 
 
         <!--  BEGIN CUSTOM STYLE FILE  -->
-        @vite(['public/src/plugins/src/leaflet/leaflet.css'])
+        {{-- @vite(['public/src/plugins/src/leaflet/leaflet.css'])
         @vite(['public/src/assets/css/light/pages/contact_us.css'])
-        @vite(['public/src/assets/css/dark/pages/contact_us.css'])
+        @vite(['public/src/assets/css/dark/pages/contact_us.css']) --}}
         <!--  END CUSTOM STYLE FILE  -->
 
         <style>
@@ -373,9 +373,9 @@
 
 
         <!-- BEGIN PAGE LEVEL SCRIPTS -->
-        @vite(['public/src/plugins/src/leaflet/us-states.js'])
+        {{-- @vite(['public/src/plugins/src/leaflet/us-states.js'])
         @vite(['public/src/plugins/src/leaflet/eu-countries.js'])
-        @vite(['public/src/plugins/src/leaflet/leaflet.js'])
+        @vite(['public/src/plugins/src/leaflet/leaflet.js']) --}}
         <!-- END PAGE LEVEL SCRIPTS -->
 
     </x-slot>

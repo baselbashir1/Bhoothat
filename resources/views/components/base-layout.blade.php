@@ -19,45 +19,46 @@
     <!-- Bootstrap-Iconpicker -->
     <link rel="stylesheet" href="dist/css/bootstrap-iconpicker.min.css" />
 
+    @vite(['public/plugins/bootstrap/bootstrap.min.css'])
     @vite(['resources/scss/layouts/vertical-light-menu/light/loader.scss'])
+    @vite(['resources/scss/layouts/vertical-light-menu/dark/loader.scss'])
+    @vite(['resources/scss/light/assets/components/carousel.scss'])
+    @vite(['resources/scss/dark/assets/components/carousel.scss'])
+    @vite(['resources/scss/light/assets/components/modal.scss'])
+    @vite(['resources/scss/dark/assets/components/modal.scss'])
+    @vite(['resources/scss/light/assets/apps/blog-create.scss'])
+    @vite(['resources/scss/dark/assets/apps/blog-create.scss'])
+    @vite(['resources/scss/light/assets/apps/blog-post.scss'])
+    @vite(['resources/scss/dark/assets/apps/blog-post.scss'])
+    @vite(['resources/scss/light/assets/forms/switches.scss'])
+    @vite(['resources/scss/dark/assets/forms/switches.scss'])
+    @vite(['resources/scss/light/plugins/tagify/custom-tagify.scss'])
+    @vite(['resources/scss/dark/plugins/tagify/custom-tagify.scss'])
+    @vite(['resources/scss/light/plugins/tagify/filepond\custom-filepond.scss'])
+    @vite(['resources/scss/dark/plugins/tagify/filepond\custom-filepond.scss'])
+    @vite(['resources/scss/light/assets/components/tabs.scss'])
+    @vite(['resources/scss/dark/assets/components/tabs.scss'])
+    @vite(['resources/scss/light/assets/elements/custom-pagination.scss'])
+    @vite(['resources/scss/dark/assets/elements/custom-pagination.scss'])
+    @vite(['resources/scss/light/assets/scrollspyNav.scss'])
+    @vite(['resources/scss/dark/assets/scrollspyNav.scss'])
+    @vite(['resources/scss/light/plugins/editors/quill/quill.snow.scss'])
+    @vite(['resources/scss/dark/plugins/editors/quill/quill.snow.scss'])
+    {{-- @vite(['resources/scss/layouts/vertical-dark-menu/light/loader.scss']) --}}
+    {{-- @vite(['resources/scss/layouts/vertical-dark-menu/dark/loader.scss']) --}}
+    @vite(['resources/scss/layouts/vertical-light-menu/light/loader.scss'])
+    @vite(['resources/scss/layouts/vertical-light-menu/dark/loader.scss'])
+    @vite(['public/plugins/animate/animate.css'])
+    @vite(['public/plugins/tagify/tagify.css'])
+    @vite(['public/plugins/filepond/filepond.min.css'])
+    @vite(['public/plugins/filepond/FilePondPluginImagePreview.min.css'])
 
-
-
-
-    @vite(['public/layouts/horizontal-dark-menu/css/light/loader.css'])
-    @vite(['public/layouts/horizontal-dark-menu/css/dark/loader.css'])
-    @vite(['public/layouts/horizontal-dark-menu/loader.js'])
-    @vite(['public/src/bootstrap/css/bootstrap.min.css'])
+    {{--
     @vite(['public/layouts/horizontal-dark-menu/css/light/plugins.css'])
     @vite(['public/layouts/horizontal-dark-menu/css/dark/plugins.css'])
+    --}}
 
-    @vite(['public/src/plugins/src/filepond/filepond.min.css'])
-    @vite(['public/src/plugins/src/filepond/FilePondPluginImagePreview.min.css'])
-    @vite(['public/src/plugins/src/tagify/tagify.css'])
-    @vite(['public/src/assets/css/light/forms/switches.css'])
-    @vite(['public/src/plugins/css/light/editors/quill/quill.snow.css'])
-    @vite(['public/src/plugins/css/light/tagify/custom-tagify.css'])
-    @vite(['public/src/plugins/css/light/filepond/custom-filepond.css'])
-    @vite(['public/src/assets/css/dark/forms/switches.css'])
-    @vite(['public/src/plugins/css/dark/editors/quill/quill.snow.css'])
-    @vite(['public/src/plugins/css/dark/tagify/custom-tagify.css'])
-    @vite(['public/src/plugins/css/dark/filepond/custom-filepond.css'])
-
-    @vite(['public/src/assets/css/light/apps/blog-create.css'])
-    @vite(['public/src/assets/css/dark/apps/blog-create.css'])
-    @vite(['public/src/assets/css/light/elements/custom-pagination.css'])
-    @vite(['public/src/assets/css/light/apps/blog-post.css'])
-    @vite(['public/src/assets/css/dark/elements/custom-pagination.css'])
-    @vite(['public/src/assets/css/dark/apps/blog-post.css'])
-    @vite(['public/src/plugins/src/animate/animate.css'])
-    @vite(['public/src/assets/css/light/scrollspyNav.css'])
-    @vite(['public/src/assets/css/light/components/carousel.css'])
-    @vite(['public/src/assets/css/light/components/modal.css'])
-    @vite(['public/src/assets/css/light/components/tabs.css'])
-    @vite(['public/src/assets/css/dark/scrollspyNav.css'])
-    @vite(['public/src/assets/css/dark/components/carousel.css'])
-    @vite(['public/src/assets/css/dark/components/modal.css'])
-    @vite(['public/src/assets/css/dark/components/tabs.css'])
+    @vite(['resources/layouts/vertical-light-menu/loader.js'])
 
     <style>
         /* .scrollbar {
@@ -191,7 +192,7 @@
         {{-- @auth --}}
         {{-- @if (!Request::routeIs('blank')) --}}
         <!--  BEGIN SIDEBAR  -->
-        <x-menu.vertical-menu />
+        {{-- <x-menu.vertical-menu /> --}}
         <!--  END SIDEBAR  -->
         {{-- @endif --}}
         {{-- @endauth --}}
@@ -273,13 +274,13 @@
     {{-- @endif --}}
 
 
-    @vite(['public/src/bootstrap/js/bootstrap.bundle.min.js'])
+    {{-- @vite(['public/src/bootstrap/js/bootstrap.bundle.min.js'])
     @vite(['public/src/plugins/src/perfect-scrollbar/perfect-scrollbar.min.js'])
     @vite(['public/src/plugins/src/mousetrap/mousetrap.min.js'])
     @vite(['public/src/plugins/src/waves/waves.min.js'])
-    @vite(['public/layouts/horizontal-dark-menu/app.js'])
+    @vite(['public/layouts/horizontal-dark-menu/app.js']) --}}
 
-    @vite(['public/src/plugins/src/editors/quill/quill.js'])
+    {{-- @vite(['public/src/plugins/src/editors/quill/quill.js'])
     @vite(['public/src/plugins/src/filepond/filepond.min.js'])
     @vite(['public/src/plugins/src/filepond/FilePondPluginFileValidateType.min.js'])
     @vite(['public/src/plugins/src/filepond/FilePondPluginImageExifOrientation.min.js'])
@@ -291,7 +292,7 @@
     @vite(['public/src/plugins/src/tagify/tagify.min.js'])
     @vite(['public/src/assets/js/apps/blog-create.js'])
     @vite(['public/src/plugins/src/highlight/highlight.pack.js'])
-    @vite(['public/src/assets/js/scrollspyNav.js'])
+    @vite(['public/src/assets/js/scrollspyNav.js']) --}}
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
 
