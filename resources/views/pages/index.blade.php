@@ -4,10 +4,10 @@
 
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <x-slot:headerFiles>
-        <!--  BEGIN CUSTOM STYLE FILE  -->
-        <link rel="stylesheet" href="{{ asset('plugins/filepond/filepond.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('plugins/filepond/FilePondPluginImagePreview.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('plugins/tagify/tagify.css') }}">
+
+        @vite(['public/plugins/filepond/filepond.min.css'])
+        @vite(['public/plugins/filepond/FilePondPluginImagePreview.min.css'])
+        @vite(['public/plugins/tagify/tagify.css'])
 
         @vite(['resources/scss/light/assets/forms/switches.scss'])
         @vite(['resources/scss/light/plugins/editors/quill/quill.snow.scss'])
@@ -21,13 +21,11 @@
 
         @vite(['resources/scss/light/assets/apps/ecommerce-create.scss'])
         @vite(['resources/scss/dark/assets/apps/ecommerce-create.scss'])
-        <!--  END CUSTOM STYLE FILE  -->
 
+        @vite(['public/plugins/leaflet/leaflet.css'])
 
-        <!--  BEGIN CUSTOM STYLE FILE  -->
-        {{-- @vite(['public/src/plugins/src/leaflet/leaflet.css'])
-        @vite(['public/src/assets/css/light/pages/contact_us.css'])
-        @vite(['public/src/assets/css/dark/pages/contact_us.css']) --}}
+        @vite(['resources/scss/light/assets/pages/contact_us.scss'])
+        @vite(['resources/scss/dark/assets/pages/contact_us.scss'])
         <!--  END CUSTOM STYLE FILE  -->
 
         <style>
@@ -57,7 +55,6 @@
                 }
             }
         </style>
-
 
     </x-slot>
     <!-- END GLOBAL MANDATORY STYLES -->
@@ -219,8 +216,8 @@
                                                             type="text" name="name" :value="old('name')"
                                                             autocomplete="name" placeholder="Enter your name" required
                                                             autofocus /> --}}
-                                                        <input id="name" class="form-control"
-                                                            type="text" name="name" value="{{ old('name') }}"
+                                                        <input id="name" class="form-control" type="text"
+                                                            name="name" value="{{ old('name') }}"
                                                             autocomplete="name" placeholder="Enter your name" required
                                                             autofocus />
                                                         {{-- <x-input-error :messages="$errors->get('name')" class="mt-2" /> --}}
@@ -246,8 +243,8 @@
                                                             autocomplete="email"
                                                             placeholder="Enter your email address" required
                                                             autofocus /> --}}
-                                                        <input id="email" class="form-control"
-                                                            type="email" name="email" value="{{ old('email') }}"
+                                                        <input id="email" class="form-control" type="email"
+                                                            name="email" value="{{ old('email') }}"
                                                             autocomplete="email"
                                                             placeholder="Enter your email address" required
                                                             autofocus />
@@ -274,9 +271,8 @@
                                                             type="password" name="password"
                                                             placeholder="Enter your password"
                                                             autocomplete="new-password" required autofocus /> --}}
-                                                        <input id="password" class="form-control"
-                                                            type="password" name="password"
-                                                            placeholder="Enter your password"
+                                                        <input id="password" class="form-control" type="password"
+                                                            name="password" placeholder="Enter your password"
                                                             autocomplete="new-password" required autofocus />
                                                         {{-- <x-input-error :messages="$errors->get('password')" class="mt-2" /> --}}
                                                     </div>
@@ -359,25 +355,21 @@
 
     <!--  BEGIN CUSTOM SCRIPTS FILE  -->
     <x-slot:footerFiles>
-        <script src="{{ asset('plugins/editors/quill/quill.js') }}"></script>
-        <script src="{{ asset('plugins/filepond/filepond.min.js') }}"></script>
-        <script src="{{ asset('plugins/filepond/FilePondPluginFileValidateType.min.js') }}"></script>
-        <script src="{{ asset('plugins/filepond/FilePondPluginImageExifOrientation.min.js') }}"></script>
-        <script src="{{ asset('plugins/filepond/FilePondPluginImagePreview.min.js') }}"></script>
-        <script src="{{ asset('plugins/filepond/FilePondPluginImageCrop.min.js') }}"></script>
-        <script src="{{ asset('plugins/filepond/FilePondPluginImageResize.min.js') }}"></script>
-        <script src="{{ asset('plugins/filepond/FilePondPluginImageTransform.min.js') }}"></script>
-        <script src="{{ asset('plugins/filepond/filepondPluginFileValidateSize.min.js') }}"></script>
-        <script src="{{ asset('plugins/tagify/tagify.min.js') }}"></script>
+        @vite(['public/plugins/editors/quill/quill.js'])
+        @vite(['public/plugins/filepond/filepond.min.js'])
+        @vite(['public/plugins/filepond/FilePondPluginFileValidateType.min.js'])
+        @vite(['public/plugins/filepond/FilePondPluginImageExifOrientation.min.js'])
+        @vite(['public/plugins/filepond/FilePondPluginImagePreview.min.js'])
+        @vite(['public/plugins/filepond/FilePondPluginImageCrop.min.js'])
+        @vite(['public/plugins/filepond/FilePondPluginImageResize.min.js'])
+        @vite(['public/plugins/filepond/FilePondPluginImageTransform.min.js'])
+        @vite(['public/plugins/filepond/filepondPluginFileValidateSize.min.js'])
+        @vite(['public/plugins/tagify/tagify.min.js'])
         @vite(['resources/assets/js/apps/ecommerce-create.js'])
-
-
-        <!-- BEGIN PAGE LEVEL SCRIPTS -->
-        {{-- @vite(['public/src/plugins/src/leaflet/us-states.js'])
-        @vite(['public/src/plugins/src/leaflet/eu-countries.js'])
-        @vite(['public/src/plugins/src/leaflet/leaflet.js']) --}}
-        <!-- END PAGE LEVEL SCRIPTS -->
-
+        @vite(['public/plugins/leaflet/leaflet.js'])
+        @vite(['public/plugins/leaflet/us-states.js'])
+        @vite(['public/plugins/leaflet/eu-countries.js'])
     </x-slot>
     <!--  END CUSTOM SCRIPTS FILE  -->
+
 </x-base-layout>

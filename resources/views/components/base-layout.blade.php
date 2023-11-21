@@ -44,14 +44,21 @@
     @vite(['resources/scss/dark/assets/scrollspyNav.scss'])
     @vite(['resources/scss/light/plugins/editors/quill/quill.snow.scss'])
     @vite(['resources/scss/dark/plugins/editors/quill/quill.snow.scss'])
-    {{-- @vite(['resources/scss/layouts/vertical-dark-menu/light/loader.scss']) --}}
-    {{-- @vite(['resources/scss/layouts/vertical-dark-menu/dark/loader.scss']) --}}
+    @vite(['resources/scss/layouts/vertical-dark-menu/light/loader.scss'])
+    @vite(['resources/scss/layouts/vertical-dark-menu/dark/loader.scss'])
     @vite(['resources/scss/layouts/vertical-light-menu/light/loader.scss'])
     @vite(['resources/scss/layouts/vertical-light-menu/dark/loader.scss'])
     @vite(['public/plugins/animate/animate.css'])
     @vite(['public/plugins/tagify/tagify.css'])
     @vite(['public/plugins/filepond/filepond.min.css'])
     @vite(['public/plugins/filepond/FilePondPluginImagePreview.min.css'])
+
+
+    @vite(['resources/scss/layouts/vertical-light-menu/light/structure.scss'])
+    @vite(['resources/scss/layouts/vertical-light-menu/dark/structure.scss'])
+
+    @vite(['resources/scss/light/plugins/plugins.min.scss'])
+    @vite(['resources/scss/dark/plugins/plugins.min.scss'])
 
     {{--
     @vite(['public/layouts/horizontal-dark-menu/css/light/plugins.css'])
@@ -284,21 +291,17 @@
     @vite(['public/plugins/filepond/FilePondPluginImageCrop.min.js'])
     @vite(['public/plugins/filepond/FilePondPluginImageResize.min.js'])
     @vite(['public/plugins/filepond/FilePondPluginImageTransform.min.js'])
-    @vite(['public\plugins\filepond\filepondPluginFileValidateSize.min.js'])
-
-    {{--
-    @vite(['public/layouts/horizontal-dark-menu/app.js']) --}}
-
-    {{-- @vite(['public/src/plugins/src/editors/quill/quill.js'])
-    @vite(['public/src/plugins/src/tagify/tagify.min.js'])
-    @vite(['public/src/assets/js/apps/blog-create.js'])
-    @vite(['public/src/plugins/src/highlight/highlight.pack.js'])
-    @vite(['public/src/assets/js/scrollspyNav.js']) --}}
+    @vite(['public/plugins/filepond/filepondPluginFileValidateSize.min.js'])
+    @vite(['resources/assets/js/apps/blog-create.js'])
+    {{-- @vite(['resources/assets/js/scrollspyNav.js']) --}}
+    @vite(['public/plugins/tagify/tagify.min.js'])
+    @vite(['public/plugins/highlight/highlight.pack.js'])
+    @vite(['public/plugins/editors/quill/quill.js'])
+    {{-- @vite(['resources/layouts/vertical-light-menu/app.js']) --}}
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
-
-
     {{ $footerFiles }}
+
 </body>
 
 </html>
